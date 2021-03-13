@@ -16,12 +16,12 @@ The output (of the time statistics and signal statistics) is displayed directly 
 
 ## PROGRAM STRUCTURE 
 The main structures of the program are separated into the following C++ (.cpp) files:
-    - myhie.cpp, which is the root node of the program. This node handles the command line arguments, spawns the coordinator node, and receives SIGUSR1 and SIGUSR2 signals from the sorter and merger nodes, respectively.
-    - csv.cpp, which handles the main csv functions such as reading from the input csv file, writing to the output csv file, and getting the size of a csv file.
-    - coord.cpp, which contains the coordinator node. This node spawns the sorter nodes and handles the range of data points that each sorter node has to sort through.
-    - merger.cpp, which contains the merger node. This node is intended to receive the partially sorted data points from each node and return a fully sorted array to the root node, alerting the root (myhie) node with a SIGUSR2 signal.
-    - taxpayer.cpp contains the Taxpayer data type. This allows the myhie program to create an array of type Taxpayer to easily store the information from the input CSV file.
-    - bubblesort.cpp & selectionsort.cpp contain both sorting programs that sort through the Taxpayer array. It is provided an order (ascending or descending order) as well as the attribute to sort by (RID, income, # of Dependents, or zipcode).
+- myhie.cpp, which is the root node of the program. This node handles the command line arguments, spawns the coordinator node, and receives SIGUSR1 and SIGUSR2 signals from the sorter and merger nodes, respectively.
+- csv.cpp, which handles the main csv functions such as reading from the input csv file, writing to the output csv file, and getting the size of a csv file.
+- coord.cpp, which contains the coordinator node. This node spawns the sorter nodes and handles the range of data points that each sorter node has to sort through.
+- merger.cpp, which contains the merger node. This node is intended to receive the partially sorted data points from each node and return a fully sorted array to the root node, alerting the root (myhie) node with a SIGUSR2 signal.
+- taxpayer.cpp contains the Taxpayer data type. This allows the myhie program to create an array of type Taxpayer to easily store the information from the input CSV file.
+- bubblesort.cpp & selectionsort.cpp contain both sorting programs that sort through the Taxpayer array. It is provided an order (ascending or descending order) as well as the attribute to sort by (RID, income, # of Dependents, or zipcode).
 
 ## DESIGN CHOICES
 The 2 sorting algorithms of choice for the myhie program were Selection Sort and Bubble Sort. 
