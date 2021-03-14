@@ -1,5 +1,5 @@
 # OSAssignment2
-### 2nd Assignment for the NYUAD Operating Systems Course, submitted March 13th 2021
+### 2nd Assignment for Operating Systems class, submitted March 13th 2021
 ### by Liam Richards
 
 ## HOW TO RUN THE PROGRAM
